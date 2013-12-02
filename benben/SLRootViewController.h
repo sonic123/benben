@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RNFrostedSidebar.h"
+#import "SLAppDelegate.h"
+
 @class MBProgressHUD;
 @class SLMovieController;
 @class SLFoodController;
@@ -19,13 +21,17 @@
 @property (strong, nonatomic) SLFoodController *foodController;
 @property (strong, nonatomic) SLMovieController *movieController;
 
+//
 - (void)showHudOnView:(UIView*)aView withTitle:(NSString*)aTitle;
 - (void)changeHudTitle:(NSString*)aNewTitle;
 - (void)changeHudToCustomViewMode:(NSString*)aTitle
                         withImage:(NSString*)imgName
            hideAfterTimeIntervals:(NSTimeInterval)timeDelay;
 - (void)hideAfterTimeIntervals:(NSTimeInterval)timeDelay;
-
+//
+-(SLAppDelegate *)getApplegate;
+//
 -(void)showMenu;
 -(void)goBack;
+
 @end

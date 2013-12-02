@@ -7,9 +7,9 @@
 //
 
 #import "SLMainViewController.h"
-#import "SLHomePageCell.h"
 #import "SLFoodController.h"
 #import "SLMovieController.h"
+#import "SLAppDelegate.h"
 
 
 static NSString *HomePageCellIdentifier = @"HomePageCellIdentifier";
@@ -35,8 +35,23 @@ static NSString *HomePageCellIdentifier = @"HomePageCellIdentifier";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-   
+    [self initLocation];
     [self initUI];
+}
+-(void)initLocation{
+    if ([CLLocationManager locationServicesEnabled]) {
+        if (!self.locationManager) {
+            self.locationManager=[[CLLocationManager alloc]init];
+            self.locationManager.delegate=self;
+            self.locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+            self.locationManager.distanceFilter=1000.0f;
+        }
+        //启动位置更新
+        [self.locationManager startUpdatingLocation];
+    }else{
+        UIAlertView *alterShow=[[UIAlertView alloc]initWithTitle:@"" message:@"定位服务不可用，请打开定位功能" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alterShow show];
+    }
 }
 -(void)initUI{
     UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(110, 10, 100, 30)];
@@ -67,6 +82,23 @@ static NSString *HomePageCellIdentifier = @"HomePageCellIdentifier";
         movieController=nil;
     }
 }
+#pragma mark -
+#pragma mark CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation{
+    SLAppDelegate *delegate=[super getApplegate];
+    delegate.lat=newLocation.coordinate.latitude;
+    delegate.lng=newLocation.coordinate.longitude;
+    delegate=nil;
+
+    
+}
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error{
+    
+}
+
 
 
 @end

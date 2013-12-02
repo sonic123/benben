@@ -17,6 +17,8 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
 
 @interface SLMovieController ()
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
+@property (nonatomic) int fromNumber;
+@property (nonatomic) int toNumber;
 @end
 
 @implementation SLMovieController
@@ -27,6 +29,8 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _fromNumber=1;
+        _toNumber=10;
         
     }
     return self;
@@ -61,8 +65,21 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    if ([self.cinemaArray count]==0) {
+        [self loadData];
+    }
+    
+}
+-(void)loadData{
     [super showHudOnView:self.view withTitle:@"加载中"];
-    [_aiBang searchBizWithCity:@"北京" Query:@"影院" Address:@"" Category:@"" Lng:@"116.420038" Lat:@"39.908568" Radius:@"5000" Rankcode:@"0" From:@"1" To:@"10"];
+    SLAppDelegate *delegate=[super getApplegate];
+    if (delegate.lat||delegate.lng) {
+        //        [_aiBang searchBizWithCity:@"" Query:@"餐馆" Address:@"" Category:@"" Lng:[NSString stringWithFormat:@"%f",delegate.lng] Lat:[NSString stringWithFormat:@"%f",delegate.lat] Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
+        [_aiBang searchBizWithCity:@"上海" Query:@"影院" Address:@"" Category:@"" Lng:@"121.62295695" Lat:@"31.21832748999999" Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
+    }else{
+        [_aiBang searchBizWithCity:@"北京" Query:@"餐馆" Address:@"" Category:@"" Lng:@"116.420038" Lat:@"39.908568" Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
+    }
+    delegate=nil;
 }
 -(void)showMenu{
     [super showMenu];
@@ -127,6 +144,14 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
     cell.merchantName.text=oneMerchantDM.name;
     cell.merchantCost.text=[NSString stringWithFormat:@"人均:%@",oneMerchantDM.cost];
     cell.merchantCate.text=oneMerchantDM.cate;
+    double score=[oneMerchantDM.rate doubleValue];
+    BOOL hasHalf;
+    if (score /2==0.5||score /2==1.5||score /2==2.5 ) {
+        hasHalf=YES;
+    }else{
+        hasHalf=NO;
+    }
+    [cell showRateScore:[oneMerchantDM.rate integerValue] withHalf:hasHalf];
     return cell;
 }
 

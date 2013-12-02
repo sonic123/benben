@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "SLRootViewController.h"
 
-
-@interface SLMainViewController : UIViewController
+@interface SLMainViewController : SLRootViewController<CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *foodBtn;
 @property (strong, nonatomic) IBOutlet UILabel *foodLabel;
 @property (strong, nonatomic) IBOutlet UIButton *movieBtn;
@@ -22,9 +23,14 @@
 @property (strong, nonatomic) IBOutlet UILabel *barLabel;
 @property (strong, nonatomic) IBOutlet UIButton *pedicureBtn;
 @property (strong, nonatomic) IBOutlet UILabel *pedicureLabel;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 
 -(IBAction)actChooseCategory:(id)sender;
-
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation;
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error ;
 
 @end

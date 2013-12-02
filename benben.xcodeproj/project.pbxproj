@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3290732184CCC6500BB87B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3290731184CCC6500BB87B4 /* CoreLocation.framework */; };
 		C3571AEF1843882300A40CEE /* icon_homepage_entertainmentCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = C3571AE51843882300A40CEE /* icon_homepage_entertainmentCategory.png */; };
 		C3571AF01843882300A40CEE /* icon_homepage_foodCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = C3571AE61843882300A40CEE /* icon_homepage_foodCategory.png */; };
 		C3571AF11843882300A40CEE /* icon_homepage_hotelCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = C3571AE71843882300A40CEE /* icon_homepage_hotelCategory.png */; };
@@ -20,8 +21,6 @@
 		C3571AFD1843940100A40CEE /* SLMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3571AFB1843940100A40CEE /* SLMainViewController.xib */; };
 		C3571B071843942500A40CEE /* SLFoodController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3571B031843942500A40CEE /* SLFoodController.m */; };
 		C3571B081843942500A40CEE /* SLFoodController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3571B041843942500A40CEE /* SLFoodController.xib */; };
-		C3571B0B184394CD00A40CEE /* SLHomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3571B0A184394CD00A40CEE /* SLHomePageCell.m */; };
-		C3571B0D184394DF00A40CEE /* SLHomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3571B0C184394DF00A40CEE /* SLHomePageCell.xib */; };
 		C35D3A3A1842E3FB00D09512 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35D3A391842E3FB00D09512 /* QuartzCore.framework */; };
 		C35D3A3C1842E40600D09512 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35D3A3B1842E40600D09512 /* Accelerate.framework */; };
 		C35D3A5318431EF200D09512 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C35D3A4D18431EF200D09512 /* MBProgressHUD.m */; };
@@ -78,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3290731184CCC6500BB87B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C3571AE51843882300A40CEE /* icon_homepage_entertainmentCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_entertainmentCategory.png; sourceTree = "<group>"; };
 		C3571AE61843882300A40CEE /* icon_homepage_foodCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_foodCategory.png; sourceTree = "<group>"; };
 		C3571AE71843882300A40CEE /* icon_homepage_hotelCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_hotelCategory.png; sourceTree = "<group>"; };
@@ -93,9 +93,6 @@
 		C3571B021843942500A40CEE /* SLFoodController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFoodController.h; sourceTree = "<group>"; };
 		C3571B031843942500A40CEE /* SLFoodController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFoodController.m; sourceTree = "<group>"; };
 		C3571B041843942500A40CEE /* SLFoodController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLFoodController.xib; sourceTree = "<group>"; };
-		C3571B09184394CD00A40CEE /* SLHomePageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHomePageCell.h; sourceTree = "<group>"; };
-		C3571B0A184394CD00A40CEE /* SLHomePageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHomePageCell.m; sourceTree = "<group>"; };
-		C3571B0C184394DF00A40CEE /* SLHomePageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLHomePageCell.xib; sourceTree = "<group>"; };
 		C35D3A391842E3FB00D09512 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C35D3A3B1842E40600D09512 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		C35D3A4C18431EF200D09512 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -208,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3290732184CCC6500BB87B4 /* CoreLocation.framework in Frameworks */,
 				C3F6B2F518443AA6008BE05F /* libzbar.a in Frameworks */,
 				C3F6B2F318443A83008BE05F /* libiconv.dylib in Frameworks */,
 				C3F6B30F18443ABE008BE05F /* libzbar.a in Frameworks */,
@@ -257,9 +255,6 @@
 				C3571AF91843940000A40CEE /* SLMainViewController.h */,
 				C3571AFA1843940100A40CEE /* SLMainViewController.m */,
 				C3571AFB1843940100A40CEE /* SLMainViewController.xib */,
-				C3571B09184394CD00A40CEE /* SLHomePageCell.h */,
-				C3571B0A184394CD00A40CEE /* SLHomePageCell.m */,
-				C3571B0C184394DF00A40CEE /* SLHomePageCell.xib */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -380,6 +375,7 @@
 		C39EC95E1842E2D50042E881 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3290731184CCC6500BB87B4 /* CoreLocation.framework */,
 				C3F6B2F418443AA6008BE05F /* libzbar.a */,
 				C3F6B2F218443A83008BE05F /* libiconv.dylib */,
 				C3F6B2F018443A60008BE05F /* CoreVideo.framework */,
@@ -632,7 +628,6 @@
 				C3F6B33018444FB9008BE05F /* icon_dealsmap_back.png in Resources */,
 				C3B70CDE1843296E00958FCE /* 37x-Checkmark.png in Resources */,
 				C3B70CDC1843296E00958FCE /* 37x-Checkerror.png in Resources */,
-				C3571B0D184394DF00A40CEE /* SLHomePageCell.xib in Resources */,
 				C3571AF21843882300A40CEE /* icon_homepage_KTVCategory.png in Resources */,
 				C39EC9741842E2D50042E881 /* Default@2x.png in Resources */,
 				C3571AF61843882300A40CEE /* icon_rating_star_not_picked.png in Resources */,
@@ -658,7 +653,6 @@
 				C3B70D1C18434AC700958FCE /* UIImage+WebP.m in Sources */,
 				C35D3A5418431EF200D09512 /* PopoverView.m in Sources */,
 				C39EC9701842E2D50042E881 /* SLAppDelegate.m in Sources */,
-				C3571B0B184394CD00A40CEE /* SLHomePageCell.m in Sources */,
 				C3F6B32718444AA5008BE05F /* SLMovieController.m in Sources */,
 				C3571B071843942500A40CEE /* SLFoodController.m in Sources */,
 				C3B70D1118434AC700958FCE /* NSData+GIF.m in Sources */,
@@ -754,8 +748,8 @@
 		C39EC9801842E2D50042E881 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Colin Lu (4E8MHKJZWY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Colin Lu (4E8MHKJZWY)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -771,7 +765,7 @@
 					/Users/sonic/Desktop/benben/benben/Dependencies/ZBarSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EB9C3D2B-69BF-41CB-8753-5788F2789277";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -779,8 +773,8 @@
 		C39EC9811842E2D50042E881 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Colin Lu (4E8MHKJZWY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Colin Lu (4E8MHKJZWY)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -796,7 +790,7 @@
 					/Users/sonic/Desktop/benben/benben/Dependencies/ZBarSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EB9C3D2B-69BF-41CB-8753-5788F2789277";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

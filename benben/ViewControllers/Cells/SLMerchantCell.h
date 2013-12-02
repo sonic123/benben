@@ -15,4 +15,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *merchantCost;
 @property (strong, nonatomic) IBOutlet UILabel *merchantCate;
 @property (strong, nonatomic) IBOutlet UILabel *merchantDistance;
+@property (strong, nonatomic) IBOutlet UIImageView *rateImageView1;
+@property (strong, nonatomic) IBOutlet UIImageView *rateImageView2;
+@property (strong, nonatomic) IBOutlet UIImageView *rateImageView3;
+@property (strong, nonatomic) IBOutlet UIImageView *rateImageView4;
+@property (strong, nonatomic) IBOutlet UIImageView *rateImageView5;
+
+-(void)showRateScore:(NSInteger)score withHalf:(BOOL)hasHalf;
+
 @end

@@ -11,6 +11,7 @@
 #import "RNFrostedSidebar.h"
 #import "SLFoodController.h"
 #import "SLMovieController.h"
+#import "SLAppDelegate.h"
 
 @interface SLRootViewController ()<MBProgressHUDDelegate,RNFrostedSidebarDelegate>
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
@@ -31,6 +32,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -165,5 +167,11 @@
     }
 }
 
+
+#pragma mark -
+#pragma mark Appdelegate
+-(SLAppDelegate *)getApplegate{
+    return [[UIApplication sharedApplication]delegate];
+}
 
 @end

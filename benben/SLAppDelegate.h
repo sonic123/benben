@@ -12,6 +12,8 @@
 @interface SLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic) double lat;
+@property (nonatomic) double lng;
 
 
 

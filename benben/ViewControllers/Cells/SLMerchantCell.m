@@ -33,7 +33,7 @@
         self.merchantName.font=[UIFont fontWithName:@"Avenir-Light" size:15];
         [self.contentView addSubview:self.merchantName];
         
-        self.merchantCost=[[UILabel alloc]initWithFrame:CGRectMake(221, 20, 93, 21)];
+        self.merchantCost=[[UILabel alloc]initWithFrame:CGRectMake(253, 28, 61, 21)];
         self.merchantCost.backgroundColor=[UIColor clearColor];
         self.merchantCost.text=@"人均:";
         self.merchantCost.font=[UIFont fontWithName:@"Avenir-Light" size:15];
@@ -43,9 +43,88 @@
         self.merchantCate.backgroundColor=[UIColor clearColor];
         self.merchantCate.font=[UIFont fontWithName:@"Avenir-Light" size:15];
         [self.contentView addSubview:self.merchantCate];
+        
+        self.rateImageView1=[[UIImageView alloc]initWithFrame:CGRectMake(96, 28, 19, 19)];
+        self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_not_picked"];
+        [self.contentView addSubview:self.rateImageView1];
+        
+        self.rateImageView2=[[UIImageView alloc]initWithFrame:CGRectMake(115, 28, 19, 19)];
+        self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_not_picked"];
+        [self.contentView addSubview:self.rateImageView2];
+        
+        self.rateImageView3=[[UIImageView alloc]initWithFrame:CGRectMake(134, 28, 19, 19)];
+        self.rateImageView3.image=[UIImage imageNamed:@"icon_rating_star_not_picked"];
+        [self.contentView addSubview:self.rateImageView3];
+        
+        self.rateImageView4=[[UIImageView alloc]initWithFrame:CGRectMake(153, 28, 19, 19)];
+        self.rateImageView4.image=[UIImage imageNamed:@"icon_rating_star_not_picked"];
+        [self.contentView addSubview:self.rateImageView4];
+        
+        self.rateImageView5=[[UIImageView alloc]initWithFrame:CGRectMake(172, 28, 19, 19)];
+        self.rateImageView5.image=[UIImage imageNamed:@"icon_rating_star_not_picked"];
+        [self.contentView addSubview:self.rateImageView5];
     }
     return self;
 }
+-(void)showRateScore:(NSInteger)score withHalf:(BOOL) hasHalf{
+    switch (score) {
+        case 1:
+            if (hasHalf) {
+                self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_half"];
+            } else {
+                self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            }
+            break;
+        case 2:
+            if (hasHalf) {
+                self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView3.image=[UIImage imageNamed:@"icon_rating_star_half"];
+            } else {
+                self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            }
+            break;
+        case 3:
+            if (hasHalf) {
+                self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView3.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView4.image=[UIImage imageNamed:@"icon_rating_star_half"];
+            } else {
+                self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView3.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            }
+            break;
+        case 4:
+            if (hasHalf) {
+                self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView3.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView4.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView5.image=[UIImage imageNamed:@"icon_rating_star_half"];
+            } else {
+                self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView3.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+                self.rateImageView4.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            }
+            break;
+        case 5:
+            self.rateImageView1.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            self.rateImageView2.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            self.rateImageView3.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            self.rateImageView4.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            self.rateImageView5.image=[UIImage imageNamed:@"icon_rating_star_picked"];
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

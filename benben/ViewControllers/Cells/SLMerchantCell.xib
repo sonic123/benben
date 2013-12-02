@@ -12,6 +12,11 @@
                 <outlet property="merchantCost" destination="haM-uw-gSt" id="FWB-Jj-NGo"/>
                 <outlet property="merchantDistance" destination="fHV-hp-lLp" id="Fz3-ll-gpC"/>
                 <outlet property="merchantName" destination="74j-g5-Zlp" id="ZzT-ja-SJI"/>
+                <outlet property="rateImageView1" destination="rkV-ms-b2s" id="9my-4F-Kxd"/>
+                <outlet property="rateImageView2" destination="fLj-4e-CAW" id="shr-Gj-lN1"/>
+                <outlet property="rateImageView3" destination="SmJ-Ni-cnY" id="JJ8-Wg-DYO"/>
+                <outlet property="rateImageView4" destination="hp5-nu-cRT" id="vEa-lr-I31"/>
+                <outlet property="rateImageView5" destination="Ur5-Bh-snz" id="axK-lc-Gbg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -34,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人均:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haM-uw-gSt">
-                        <rect key="frame" x="221" y="20" width="93" height="21"/>
+                        <rect key="frame" x="253" y="27" width="61" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                         <nil key="highlightedColor"/>
@@ -52,6 +57,26 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rkV-ms-b2s">
+                        <rect key="frame" x="96" y="28" width="19" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-4e-CAW">
+                        <rect key="frame" x="115" y="28" width="19" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SmJ-Ni-cnY">
+                        <rect key="frame" x="134" y="28" width="19" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hp5-nu-cRT">
+                        <rect key="frame" x="153" y="28" width="19" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ur5-Bh-snz">
+                        <rect key="frame" x="172" y="28" width="19" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
         </tableViewCell>

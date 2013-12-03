@@ -11,6 +11,10 @@
 #import "RNFrostedSidebar.h"
 #import "SLFoodController.h"
 #import "SLMovieController.h"
+#import "SLBarController.h"
+#import "SLHotelsController.h"
+#import "SLKTVController.h"
+#import "SLPedicureController.h"
 #import "SLAppDelegate.h"
 
 @interface SLRootViewController ()<MBProgressHUDDelegate,RNFrostedSidebarDelegate>
@@ -154,6 +158,32 @@
         }
         [newControllers addObject:self.movieController];
     }
+    if (index == 2) {
+        if (!self.hotelsController) {
+            self.hotelsController=[[SLHotelsController alloc]initWithNibName:@"SLHotelsController" bundle:nil];
+        }
+
+        [newControllers addObject:self.hotelsController];
+    }
+    if (index == 3) {
+        if (!self.ktvController) {
+            self.ktvController=[[SLKTVController alloc]initWithNibName:@"SLKTVController" bundle:nil];
+        }
+        [newControllers addObject:self.ktvController];
+    }
+    if (index == 4) {
+        if (!self.barController) {
+            self.barController=[[SLBarController alloc]initWithNibName:@"SLBarController" bundle:nil];
+        }
+        [newControllers addObject:self.barController];
+    }
+    if (index == 5) {
+        if (!self.pedicureController) {
+            self.pedicureController=[[SLPedicureController alloc]initWithNibName:@"SLPedicureController" bundle:nil];
+        }
+        [newControllers addObject:self.pedicureController];
+    }
+    
     [self.navigationController setViewControllers:newControllers animated:NO];
     [sidebar dismiss];
 }

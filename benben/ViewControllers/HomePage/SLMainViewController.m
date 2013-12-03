@@ -7,9 +7,14 @@
 //
 
 #import "SLMainViewController.h"
+#import "SLAppDelegate.h"
 #import "SLFoodController.h"
 #import "SLMovieController.h"
-#import "SLAppDelegate.h"
+#import "SLBarController.h"
+#import "SLHotelsController.h"
+#import "SLKTVController.h"
+#import "SLPedicureController.h"
+
 
 
 static NSString *HomePageCellIdentifier = @"HomePageCellIdentifier";
@@ -72,15 +77,54 @@ static NSString *HomePageCellIdentifier = @"HomePageCellIdentifier";
 -(IBAction)actChooseCategory:(id)sender{
 
     if ([sender isEqual:self.foodBtn]) {
-        SLFoodController *foodController=[[SLFoodController alloc]initWithNibName:@"SLFoodController" bundle:nil];
-        [self.navigationController pushViewController:foodController animated:YES];
-        foodController=nil;
+        if (!self.foodController) {
+            self.foodController=[[SLFoodController alloc]initWithNibName:@"SLFoodController" bundle:nil];
+        }
+        
+        [self.navigationController pushViewController:self.foodController animated:YES];
+
     }
     if([sender isEqual:self.movieBtn]){
-        SLMovieController *movieController=[[SLMovieController alloc]initWithNibName:@"SLMovieController" bundle:nil];
-        [self.navigationController pushViewController:movieController animated:YES];
-        movieController=nil;
+        if (!self.movieController) {
+            self.movieController=[[SLMovieController alloc]initWithNibName:@"SLMovieController" bundle:nil];
+        }
+        
+        [self.navigationController pushViewController:self.movieController animated:YES];
+
     }
+    if([sender isEqual:self.hotelBtn]){
+        if (!self.hotelsController) {
+            self.hotelsController=[[SLHotelsController alloc]initWithNibName:@"SLHotelsController" bundle:nil];
+        }
+        
+        [self.navigationController pushViewController:self.hotelsController animated:YES];
+        
+    }
+    if([sender isEqual:self.ktvBtn]){
+        if (!self.ktvController) {
+            self.ktvController=[[SLKTVController alloc]initWithNibName:@"SLKTVController" bundle:nil];
+        }
+        
+        [self.navigationController pushViewController:self.ktvController animated:YES];
+        
+    }
+    if([sender isEqual:self.barBtn]){
+        if (!self.barController) {
+            self.barController=[[SLBarController alloc]initWithNibName:@"SLBarController" bundle:nil];
+        }
+        
+        [self.navigationController pushViewController:self.barController animated:YES];
+        
+    }
+    if([sender isEqual:self.pedicureBtn]){
+        if (!self.pedicureController) {
+            self.pedicureController=[[SLPedicureController alloc]initWithNibName:@"SLPedicureController" bundle:nil];
+        }
+        
+        [self.navigationController pushViewController:self.pedicureController animated:YES];
+        
+    }
+    
 }
 #pragma mark -
 #pragma mark CLLocationManagerDelegate

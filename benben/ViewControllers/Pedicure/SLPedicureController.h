@@ -9,14 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "SLRootViewController.h"
 #import "AibangApi.h"
-#import "RNFrostedSidebar.h"
 @class SLDetailViewController;
 
-@interface SLFoodController : SLRootViewController<UITableViewDataSource,UITableViewDataSource,RNFrostedSidebarDelegate>{
+@interface SLPedicureController : SLRootViewController<UITableViewDataSource,UITableViewDataSource>{
     AibangApi *_aiBang;
 }
-@property (strong, nonatomic) NSMutableArray *merchantsArray;
+@property (strong, nonatomic) NSMutableArray *pedicureArray;
 
-@property (strong, nonatomic) IBOutlet UITableView *mechantTable;
+@property (strong, nonatomic) IBOutlet UITableView *pedicureTable;
 @property (strong, nonatomic) SLDetailViewController *detailView;
 @end

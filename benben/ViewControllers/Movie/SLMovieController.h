@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SLRootViewController.h"
 #import "AibangApi.h"
-
+@class SLDetailViewController;
 
 @interface SLMovieController : SLRootViewController<UITableViewDataSource,UITableViewDataSource>{
     AibangApi *_aiBang;
@@ -17,4 +17,5 @@
 @property (strong, nonatomic) NSMutableArray *cinemaArray;
 
 @property (strong, nonatomic) IBOutlet UITableView *cinemaTable;
+@property (strong, nonatomic) SLDetailViewController *detailView;
 @end

@@ -10,6 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "SLRootViewController.h"
 
+@class SLFoodController,SLMovieController,SLBarController,SLHotelsController,SLKTVController,SLPedicureController;
+
 @interface SLMainViewController : SLRootViewController<CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *foodBtn;
 @property (strong, nonatomic) IBOutlet UILabel *foodLabel;
@@ -24,6 +26,13 @@
 @property (strong, nonatomic) IBOutlet UIButton *pedicureBtn;
 @property (strong, nonatomic) IBOutlet UILabel *pedicureLabel;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+
+@property (strong, nonatomic) SLFoodController *foodController;
+@property (strong, nonatomic) SLHotelsController *hotelsController;
+@property (strong, nonatomic) SLMovieController *movieController;
+@property (strong, nonatomic) SLBarController *barController;
+@property (strong, nonatomic) SLKTVController *ktvController;
+@property (strong, nonatomic) SLPedicureController *pedicureController;
 
 
 -(IBAction)actChooseCategory:(id)sender;

@@ -11,15 +11,18 @@
 #import "SLAppDelegate.h"
 
 @class MBProgressHUD;
-@class SLMovieController;
-@class SLFoodController;
+@class SLFoodController,SLMovieController,SLBarController,SLHotelsController,SLKTVController,SLPedicureController;
 @class RNFrostedSidebar;
 @interface SLRootViewController : UIViewController{
     MBProgressHUD *_hud;
 }
 @property (strong, nonatomic) RNFrostedSidebar *frostedSideBar;
 @property (strong, nonatomic) SLFoodController *foodController;
+@property (strong, nonatomic) SLHotelsController *hotelsController;
 @property (strong, nonatomic) SLMovieController *movieController;
+@property (strong, nonatomic) SLBarController *barController;
+@property (strong, nonatomic) SLKTVController *ktvController;
+@property (strong, nonatomic) SLPedicureController *pedicureController;
 
 //
 - (void)showHudOnView:(UIView*)aView withTitle:(NSString*)aTitle;

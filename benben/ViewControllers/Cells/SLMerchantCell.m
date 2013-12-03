@@ -21,7 +21,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        self.merchantAvator=[[UIImageView alloc]initWithFrame:CGRectMake(8, 3, 80, 70)];
+        self.merchantAvator=[[UIImageView alloc]initWithFrame:CGRectMake(8, 8, 80, 60)];
         self.merchantAvator.contentMode=UIViewContentModeScaleToFill;
         self.merchantAvator.backgroundColor=[UIColor clearColor];
         self.merchantAvator.layer.cornerRadius=5.0f;

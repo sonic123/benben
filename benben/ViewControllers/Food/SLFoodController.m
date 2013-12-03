@@ -14,13 +14,12 @@
 #import "RNFrostedSidebar.h"
 #import "SLMovieController.h"
 #import "SLAppDelegate.h"
+#import "SLDetailViewController.h"
 
 static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
 
 @interface SLFoodController ()
 @property (strong, nonatomic) NSString *category;
-//@property (strong, nonatomic) NSString *lng;
-//@property (strong, nonatomic) NSString *lat;
 @property (nonatomic) int fromNumber;
 @property (nonatomic) int toNumber;
 
@@ -67,7 +66,7 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
     self.navigationItem.leftBarButtonItem=leftButtom;
     rightButtom=nil;
     leftButtom=nil;
-  
+    
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -79,10 +78,10 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
     [super showHudOnView:self.view withTitle:@"加载中"];
     SLAppDelegate *delegate=[super getApplegate];
     if (delegate.lat||delegate.lng) {
-//        [_aiBang searchBizWithCity:@"" Query:@"餐馆" Address:@"" Category:@"" Lng:[NSString stringWithFormat:@"%f",delegate.lng] Lat:[NSString stringWithFormat:@"%f",delegate.lat] Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
-         [_aiBang searchBizWithCity:@"上海" Query:@"餐馆" Address:@"" Category:@"" Lng:@"121.62295695" Lat:@"31.21832748999999" Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
+        [_aiBang searchBizWithCity:@"上海" Query:@"餐馆" Address:@"" Category:@"" Lng:[NSString stringWithFormat:@"%f",delegate.lng] Lat:[NSString stringWithFormat:@"%f",delegate.lat] Radius:@"1000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
+// [_aiBang searchBizWithCity:@"北京" Query:@"餐馆" Address:@"" Category:@"" Lng:@"116.420038" Lat:@"39.908568" Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
     }else{
-    [_aiBang searchBizWithCity:@"北京" Query:@"餐馆" Address:@"" Category:@"" Lng:@"116.420038" Lat:@"39.908568" Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
+        [_aiBang searchBizWithCity:@"北京" Query:@"餐馆" Address:@"" Category:@"" Lng:@"116.420038" Lat:@"39.908568" Radius:@"500" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
     }
     delegate=nil;
 }
@@ -98,15 +97,15 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
     
     if ([SLMerchantsDM parseIntoMerchantstList:self.merchantsArray fromString:data]) {
         NSLog(@"%@",self.merchantsArray);
-        [super changeHudToCustomViewMode:@"success" withImage:@"37x-CheckMark" hideAfterTimeIntervals:1];
+        [super changeHudToCustomViewMode:@"success" withImage:@"37x-CheckMark.png" hideAfterTimeIntervals:1];
         [self.mechantTable reloadData];
     }else{
-        [super changeHudToCustomViewMode:@"parse fail" withImage:@"37x-CheckMark" hideAfterTimeIntervals:1];
+        [super changeHudToCustomViewMode:@"parse fail" withImage:@"37x-CheckMark.png" hideAfterTimeIntervals:1];
     }
     
 }
 -(void) requestDidFailedWithError:(NSError*)error aibangApi:(id)aibangApi{
-    [super changeHudToCustomViewMode:@"fail" withImage:@"37-Checkerror" hideAfterTimeIntervals:1];
+    [super changeHudToCustomViewMode:@"fail" withImage:@"37-Checkerror.png" hideAfterTimeIntervals:1];
 }
 #pragma mark -
 #pragma mark UITableView Delegate
@@ -115,6 +114,12 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (!self.detailView) {
+        self.detailView=[[SLDetailViewController alloc]initWithNibName:@"SLDetailViewController" bundle:nil];
+        
+    }
+    self.detailView.dataModel=[self.merchantsArray objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:self.detailView animated:YES];
     
 }
 
@@ -145,7 +150,7 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
     }
     
     SLMerchantsDM *oneMerchantDM=[self.merchantsArray objectAtIndex:indexPath.row];
-    [cell.merchantAvator setImageWithURL:[NSURL URLWithString:oneMerchantDM.img_url] placeholderImage:[UIImage imageNamed:@""]];
+    [cell.merchantAvator setImageWithURL:[NSURL URLWithString:oneMerchantDM.img_url] placeholderImage:[UIImage imageNamed:@"MerchantsImg.png"]];
     cell.merchantName.text=oneMerchantDM.name;
     cell.merchantCost.text=[NSString stringWithFormat:@"人均:%@",oneMerchantDM.cost];
     cell.merchantCate.text=oneMerchantDM.cate;

@@ -22,7 +22,7 @@
     if (self) {
         // Initialization code
         //line num
-        self.lineNum=[[UILabel alloc]initWithFrame:CGRectMake(4, 10, 20, 20)];
+        self.lineNum=[[UILabel alloc]initWithFrame:CGRectMake(4, 15, 20, 20)];
         self.lineNum.textColor=[UIColor whiteColor];
         self.lineNum.backgroundColor=[UIColor colorWithRed:101/255.0f green:150/255.0f blue:148/255.0f alpha:1];
         self.lineNum.text=@"";
@@ -51,6 +51,10 @@
         self.showDetailBtn.titleLabel.text=@"";
         self.showDetailBtn.frame=CGRectMake(0, 0, 320, 500);
         [self.contentView addSubview:self.showDetailBtn];
+        
+//        self.backgroundColor=[UIColor whiteColor];
+        self.contentView.backgroundColor=[UIColor whiteColor];
+        self.backgroundView.backgroundColor=[UIColor whiteColor];
         
     }
     return self;

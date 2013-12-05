@@ -12,7 +12,7 @@
 @protocol SLNavigatorDelegate;
 @interface SLDetailViewNavigatorCell : UITableViewCell
 
-@property (assign, nonatomic) id<SLNavigatorDelegate> delegate;
+@property (strong, nonatomic) id<SLNavigatorDelegate> delegate;
 @property (strong, nonatomic) SLMerchantsDM *dataModel;
 @property (strong, nonatomic) IBOutlet UIButton *busBtn;
 @property (strong, nonatomic) IBOutlet UIButton *navigatorBtn;

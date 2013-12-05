@@ -81,6 +81,7 @@
         return pinView;
     }
     else{
+        pinView.animatesDrop = YES;
         pinView.annotation=annotation;
     }
     return pinView;

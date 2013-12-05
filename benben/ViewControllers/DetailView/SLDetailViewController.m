@@ -42,17 +42,27 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(110, 10, 100, 30)];
+    UILabel *titleLabel=nil;
+    titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(110, 10, 100, 30)];
     titleLabel.backgroundColor=[UIColor clearColor];
     titleLabel.text=[NSString stringWithFormat:@"%@",self.dataModel.name];
     titleLabel.font=[UIFont fontWithName:@"Avenir-Light" size:20];
     titleLabel.textColor=[UIColor whiteColor];
     titleLabel.textAlignment=NSTextAlignmentCenter;
     self.navigationItem.titleView=titleLabel;
-    titleLabel=nil;
-    [self.tableView reloadData];
+    
+  
+    
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (self.dataModel) {
+        [self.tableView reloadData];
+    }
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -61,7 +71,10 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
 #pragma mark -
 #pragma mark UITabLeViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    if (self.dataModel) {
+        return 2;
+    }
+    return 0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -97,6 +110,7 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
             SLDetailViewNavigatorCell *cell=[self.tableView dequeueReusableCellWithIdentifier:detailViewNavigatorCellID];
             if (!cell) {
                 cell=[[SLDetailViewNavigatorCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:detailViewNavigatorCellID];
+               
                 
             }
             cell.delegate=self;
@@ -107,7 +121,13 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
         }
             break;
             
-        default:
+        default:{
+            UITableViewCell *cell=[self.tableView dequeueReusableCellWithIdentifier:@"testCell"];
+            if (!cell) {
+                cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"testCell"];
+            }
+            return cell;
+        }
             break;
     }
     

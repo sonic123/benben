@@ -40,14 +40,25 @@ static NSString *BusSearchHeaderViewIdentifier = @"BusSearchHeaderViewIdentifier
         _aiBang=[[AibangApi alloc]init];
         _aiBang.delegate=self;
     }
-    self.busArray=[NSMutableArray arrayWithCapacity:0];
+   
     [self.busTable registerClass:[SLBusLineCell class] forCellReuseIdentifier:BusLineCellCellIdentifier];
     [self.busTable registerClass:[SLBusSearchHeaderView class] forHeaderFooterViewReuseIdentifier:BusSearchHeaderViewIdentifier];
+    self.busTable.separatorStyle=UITableViewCellSeparatorStyleNone;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+self.busArray=[NSMutableArray arrayWithCapacity:0];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
     [super showHudOnView:self.view withTitle:@"加载中"];
     [self loadData];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    self.currentStretchIndexPath=nil;
+    self.busArray=nil;
+    [super viewWillDisappear:animated];
 }
 -(void)loadData{
     SLAppDelegate *delegate=[super getApplegate];
@@ -192,15 +203,15 @@ static NSString *BusSearchHeaderViewIdentifier = @"BusSearchHeaderViewIdentifier
 
     SLBusDM *oneBusDM=[self.busArray objectAtIndex:indexPath.section];
     SLBusSegmentDM *oneBusSegmentDM=[oneBusDM.segmentArray objectAtIndex:indexPath.row];
-    NSString *str=[NSString stringWithFormat:@"步行%@米至%@,乘坐%@至%@",oneBusSegmentDM.foot_dist,oneBusSegmentDM.start_stat,oneBusSegmentDM.line_name,oneBusSegmentDM.end_stat];
+    NSString *str=[NSString stringWithFormat:@"线路长度:%@\n\n步行%@米至%@\n\n乘坐%@至%@\n\n",oneBusSegmentDM.line_dist,oneBusSegmentDM.foot_dist,oneBusSegmentDM.start_stat,oneBusSegmentDM.line_name,oneBusSegmentDM.end_stat];
     cell.lineDesc.text=str;
-    CGSize constraint=CGSizeMake(250, 20000.0f);
-    CGSize size=[str sizeWithFont:[UIFont fontWithName:@"Avenir-Light" size:14] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
+    CGSize constraint=CGSizeMake(200, 20000.0f);
+    CGSize size=[str sizeWithFont:[UIFont fontWithName:@"Avenir-Light" size:13] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
     
     cell.lineDesc.numberOfLines=0;
     cell.lineDesc.lineBreakMode=NSLineBreakByCharWrapping;
-    cell.lineDesc.font=[UIFont fontWithName:@"Avenir-Light" size:14];
-    cell.lineDesc.frame=CGRectMake(50, 5, size.width, size.height);
+    cell.lineDesc.font=[UIFont fontWithName:@"Avenir-Light" size:13];
+    cell.lineDesc.frame=CGRectMake(110, 5, size.width, size.height);
     
     cell.frame=CGRectMake(0, 0, 320, size.height+10);
     
@@ -208,6 +219,20 @@ static NSString *BusSearchHeaderViewIdentifier = @"BusSearchHeaderViewIdentifier
     selectedView.backgroundColor=[UIColor clearColor];
     cell.selectedBackgroundView=selectedView;
     selectedView=nil;
+    NSMutableArray *statArray=[NSMutableArray arrayWithCapacity:0];
+    NSString *statTitles=[[NSString alloc]init];
+    statTitles=oneBusSegmentDM.stats;
+    
+    while ([statTitles rangeOfString:@";"].location!= NSNotFound) {
+        NSRange range=[statTitles rangeOfString:@";"];
+        [statArray addObject:[statTitles substringToIndex:range.location-1]];
+        statTitles=[statTitles substringToIndex:range.location];
+    }
+    [statArray addObject:statTitles];
+    [statArray addObject:oneBusSegmentDM.end_stat];
+    
+    [cell updateStationPoint:cell.frame withTitle:statArray];
+    
 
     return cell;
 }

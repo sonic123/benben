@@ -14,6 +14,8 @@
 		C3185D8E184F1CB3005F4F24 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3185D8D184F1CB3005F4F24 /* Empty.xib */; };
 		C3185D91184F2BBA005F4F24 /* SLBusLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3185D90184F2BBA005F4F24 /* SLBusLineCell.m */; };
 		C3290732184CCC6500BB87B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3290731184CCC6500BB87B4 /* CoreLocation.framework */; };
+		C3508B07185060C0008A5EB4 /* SEFilterControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C3508B04185060C0008A5EB4 /* SEFilterControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C3508B08185060C0008A5EB4 /* SEFilterKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = C3508B06185060C0008A5EB4 /* SEFilterKnob.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C3571AEF1843882300A40CEE /* icon_homepage_entertainmentCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = C3571AE51843882300A40CEE /* icon_homepage_entertainmentCategory.png */; };
 		C3571AF01843882300A40CEE /* icon_homepage_foodCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = C3571AE61843882300A40CEE /* icon_homepage_foodCategory.png */; };
 		C3571AF11843882300A40CEE /* icon_homepage_hotelCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = C3571AE71843882300A40CEE /* icon_homepage_hotelCategory.png */; };
@@ -109,6 +111,10 @@
 		C3185D8F184F2BBA005F4F24 /* SLBusLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBusLineCell.h; sourceTree = "<group>"; };
 		C3185D90184F2BBA005F4F24 /* SLBusLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBusLineCell.m; sourceTree = "<group>"; };
 		C3290731184CCC6500BB87B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C3508B03185060C0008A5EB4 /* SEFilterControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEFilterControl.h; sourceTree = "<group>"; };
+		C3508B04185060C0008A5EB4 /* SEFilterControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEFilterControl.m; sourceTree = "<group>"; };
+		C3508B05185060C0008A5EB4 /* SEFilterKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEFilterKnob.h; sourceTree = "<group>"; };
+		C3508B06185060C0008A5EB4 /* SEFilterKnob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEFilterKnob.m; sourceTree = "<group>"; };
 		C3571AE51843882300A40CEE /* icon_homepage_entertainmentCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_entertainmentCategory.png; sourceTree = "<group>"; };
 		C3571AE61843882300A40CEE /* icon_homepage_foodCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_foodCategory.png; sourceTree = "<group>"; };
 		C3571AE71843882300A40CEE /* icon_homepage_hotelCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_hotelCategory.png; sourceTree = "<group>"; };
@@ -300,6 +306,17 @@
 			path = Navigator;
 			sourceTree = "<group>";
 		};
+		C3508B02185060C0008A5EB4 /* FilterControl */ = {
+			isa = PBXGroup;
+			children = (
+				C3508B03185060C0008A5EB4 /* SEFilterControl.h */,
+				C3508B04185060C0008A5EB4 /* SEFilterControl.m */,
+				C3508B05185060C0008A5EB4 /* SEFilterKnob.h */,
+				C3508B06185060C0008A5EB4 /* SEFilterKnob.m */,
+			);
+			path = FilterControl;
+			sourceTree = "<group>";
+		};
 		C3571AE41843882300A40CEE /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +389,7 @@
 		C35D3A231842E3C500D09512 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C3508B02185060C0008A5EB4 /* FilterControl */,
 				C38BA3CE184DDA61001D0F44 /* ZBarSDK */,
 				C3B70CF218434AC700958FCE /* SDWebImage */,
 				C35D3A4B18431EF200D09512 /* MBProgressHUD */,
@@ -811,10 +829,12 @@
 				C35D3A5418431EF200D09512 /* PopoverView.m in Sources */,
 				C3185D8A184F05FD005F4F24 /* SLBusSearchHeaderView.m in Sources */,
 				C39EC9701842E2D50042E881 /* SLAppDelegate.m in Sources */,
+				C3508B08185060C0008A5EB4 /* SEFilterKnob.m in Sources */,
 				C38BA3F5184DE15D001D0F44 /* SLDetailViewNavigatorCell.m in Sources */,
 				C38BA3EE184DDFB4001D0F44 /* SLDetailViewController.m in Sources */,
 				C3F6B32718444AA5008BE05F /* SLMovieController.m in Sources */,
 				C3571B071843942500A40CEE /* SLFoodController.m in Sources */,
+				C3508B07185060C0008A5EB4 /* SEFilterControl.m in Sources */,
 				C3B70D1118434AC700958FCE /* NSData+GIF.m in Sources */,
 				C38BA3F2184DE0D8001D0F44 /* SLDetailViewMapCell.m in Sources */,
 				C35D3A5318431EF200D09512 /* MBProgressHUD.m in Sources */,

@@ -83,6 +83,20 @@
 		C3C152D3184E24A3000F1806 /* SLKTVController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C152D1184E24A3000F1806 /* SLKTVController.xib */; };
 		C3C152D7184E24DB000F1806 /* SLPedicureController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C152D5184E24DB000F1806 /* SLPedicureController.m */; };
 		C3C152D8184E24DB000F1806 /* SLPedicureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C152D6184E24DB000F1806 /* SLPedicureController.xib */; };
+		C3E914E21850BA6E002DB841 /* icon_homepage_map.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E914E01850BA6E002DB841 /* icon_homepage_map.png */; };
+		C3E914E31850BA6E002DB841 /* icon_homepage_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E914E11850BA6E002DB841 /* icon_homepage_map@2x.png */; };
+		C3E914E71850BE4C002DB841 /* SLNavigatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E914E51850BE4C002DB841 /* SLNavigatorViewController.m */; };
+		C3E914E81850BE4C002DB841 /* SLNavigatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E914E61850BE4C002DB841 /* SLNavigatorViewController.xib */; };
+		C3E914EB1850BF7A002DB841 /* SLPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E914EA1850BF7A002DB841 /* SLPlace.m */; };
+		C3E914EE1850BFDE002DB841 /* SLPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E914ED1850BFDE002DB841 /* SLPlaceMark.m */; };
+		C3E914F21850C2FA002DB841 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E914F11850C2FA002DB841 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C3E914F41850C8C5002DB841 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E914F31850C8C5002DB841 /* libicucore.dylib */; };
+		C3E914FC1850CF2E002DB841 /* icon_route_end.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E914F61850CF2E002DB841 /* icon_route_end.png */; };
+		C3E914FD1850CF2E002DB841 /* icon_route_end@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E914F71850CF2E002DB841 /* icon_route_end@2x.png */; };
+		C3E914FE1850CF2E002DB841 /* icon_route_start.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E914F81850CF2E002DB841 /* icon_route_start.png */; };
+		C3E914FF1850CF2E002DB841 /* icon_route_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E914F91850CF2E002DB841 /* icon_route_start@2x.png */; };
+		C3E915001850CF2E002DB841 /* lottery_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E914FA1850CF2E002DB841 /* lottery_close@2x.png */; };
+		C3E915011850CF2E002DB841 /* lottery_close_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E914FB1850CF2E002DB841 /* lottery_close_hl@2x.png */; };
 		C3F6B2ED18443A4B008BE05F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F6B2EC18443A4B008BE05F /* AVFoundation.framework */; };
 		C3F6B2EF18443A56008BE05F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F6B2EE18443A56008BE05F /* CoreMedia.framework */; };
 		C3F6B2F118443A60008BE05F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F6B2F018443A60008BE05F /* CoreVideo.framework */; };
@@ -237,6 +251,24 @@
 		C3C152D4184E24DB000F1806 /* SLPedicureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPedicureController.h; sourceTree = "<group>"; };
 		C3C152D5184E24DB000F1806 /* SLPedicureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPedicureController.m; sourceTree = "<group>"; };
 		C3C152D6184E24DB000F1806 /* SLPedicureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLPedicureController.xib; sourceTree = "<group>"; };
+		C3E914E01850BA6E002DB841 /* icon_homepage_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_map.png; sourceTree = "<group>"; };
+		C3E914E11850BA6E002DB841 /* icon_homepage_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_homepage_map@2x.png"; sourceTree = "<group>"; };
+		C3E914E41850BE4C002DB841 /* SLNavigatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigatorViewController.h; sourceTree = "<group>"; };
+		C3E914E51850BE4C002DB841 /* SLNavigatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNavigatorViewController.m; sourceTree = "<group>"; };
+		C3E914E61850BE4C002DB841 /* SLNavigatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLNavigatorViewController.xib; sourceTree = "<group>"; };
+		C3E914E91850BF7A002DB841 /* SLPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPlace.h; sourceTree = "<group>"; };
+		C3E914EA1850BF7A002DB841 /* SLPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPlace.m; sourceTree = "<group>"; };
+		C3E914EC1850BFDE002DB841 /* SLPlaceMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPlaceMark.h; sourceTree = "<group>"; };
+		C3E914ED1850BFDE002DB841 /* SLPlaceMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPlaceMark.m; sourceTree = "<group>"; };
+		C3E914F01850C2FA002DB841 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		C3E914F11850C2FA002DB841 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		C3E914F31850C8C5002DB841 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		C3E914F61850CF2E002DB841 /* icon_route_end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_route_end.png; sourceTree = "<group>"; };
+		C3E914F71850CF2E002DB841 /* icon_route_end@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_route_end@2x.png"; sourceTree = "<group>"; };
+		C3E914F81850CF2E002DB841 /* icon_route_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_route_start.png; sourceTree = "<group>"; };
+		C3E914F91850CF2E002DB841 /* icon_route_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_route_start@2x.png"; sourceTree = "<group>"; };
+		C3E914FA1850CF2E002DB841 /* lottery_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lottery_close@2x.png"; sourceTree = "<group>"; };
+		C3E914FB1850CF2E002DB841 /* lottery_close_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lottery_close_hl@2x.png"; sourceTree = "<group>"; };
 		C3F6B2EC18443A4B008BE05F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C3F6B2EE18443A56008BE05F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C3F6B2F018443A60008BE05F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -260,6 +292,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E914F41850C8C5002DB841 /* libicucore.dylib in Frameworks */,
 				C38BA3E9184DDA92001D0F44 /* libAibangApi.a in Frameworks */,
 				C38BA3E8184DDA80001D0F44 /* libzbar.a in Frameworks */,
 				C3290732184CCC6500BB87B4 /* CoreLocation.framework in Frameworks */,
@@ -298,6 +331,13 @@
 		C3185D7F184ECFBB005F4F24 /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
+				C3E914E41850BE4C002DB841 /* SLNavigatorViewController.h */,
+				C3E914E51850BE4C002DB841 /* SLNavigatorViewController.m */,
+				C3E914E61850BE4C002DB841 /* SLNavigatorViewController.xib */,
+				C3E914E91850BF7A002DB841 /* SLPlace.h */,
+				C3E914EA1850BF7A002DB841 /* SLPlace.m */,
+				C3E914EC1850BFDE002DB841 /* SLPlaceMark.h */,
+				C3E914ED1850BFDE002DB841 /* SLPlaceMark.m */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -314,6 +354,8 @@
 		C3571AE41843882300A40CEE /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				C3E914E01850BA6E002DB841 /* icon_homepage_map.png */,
+				C3E914E11850BA6E002DB841 /* icon_homepage_map@2x.png */,
 				C3571AE51843882300A40CEE /* icon_homepage_entertainmentCategory.png */,
 				C3571AE61843882300A40CEE /* icon_homepage_foodCategory.png */,
 				C3571AE71843882300A40CEE /* icon_homepage_hotelCategory.png */,
@@ -357,6 +399,7 @@
 		C35D3A211842E3B600D09512 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3E914F51850CF2E002DB841 /* Navigator */,
 				C3508B0918508EC9008A5EB4 /* BusSearch */,
 				C3C152B8184E2364000F1806 /* ProgressHud */,
 				C3C152B3184E2309000F1806 /* Merchants */,
@@ -383,6 +426,7 @@
 		C35D3A231842E3C500D09512 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C3E914EF1850C2FA002DB841 /* RegexKitLite */,
 				C38BA3CE184DDA61001D0F44 /* ZBarSDK */,
 				C3B70CF218434AC700958FCE /* SDWebImage */,
 				C35D3A4B18431EF200D09512 /* MBProgressHUD */,
@@ -532,6 +576,7 @@
 		C39EC95E1842E2D50042E881 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3E914F31850C8C5002DB841 /* libicucore.dylib */,
 				C3290731184CCC6500BB87B4 /* CoreLocation.framework */,
 				C3F6B2F218443A83008BE05F /* libiconv.dylib */,
 				C3F6B2F018443A60008BE05F /* CoreVideo.framework */,
@@ -675,6 +720,28 @@
 			path = Pedicure;
 			sourceTree = "<group>";
 		};
+		C3E914EF1850C2FA002DB841 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				C3E914F01850C2FA002DB841 /* RegexKitLite.h */,
+				C3E914F11850C2FA002DB841 /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
+			sourceTree = "<group>";
+		};
+		C3E914F51850CF2E002DB841 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				C3E914F61850CF2E002DB841 /* icon_route_end.png */,
+				C3E914F71850CF2E002DB841 /* icon_route_end@2x.png */,
+				C3E914F81850CF2E002DB841 /* icon_route_start.png */,
+				C3E914F91850CF2E002DB841 /* icon_route_start@2x.png */,
+				C3E914FA1850CF2E002DB841 /* lottery_close@2x.png */,
+				C3E914FB1850CF2E002DB841 /* lottery_close_hl@2x.png */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		C3F6B313184449E0008BE05F /* Movie */ = {
 			isa = PBXGroup;
 			children = (
@@ -768,7 +835,9 @@
 				C3571AF41843882300A40CEE /* icon_homepage_movieCategory.png in Resources */,
 				C38BA3EF184DDFB4001D0F44 /* SLDetailViewController.xib in Resources */,
 				C3571AF51843882300A40CEE /* icon_rating_star_half.png in Resources */,
+				C3E914FC1850CF2E002DB841 /* icon_route_end.png in Resources */,
 				C3508B0D18508EC9008A5EB4 /* BusSearchPoint@2x.png in Resources */,
+				C3E914E81850BE4C002DB841 /* SLNavigatorViewController.xib in Resources */,
 				C3C152D3184E24A3000F1806 /* SLKTVController.xib in Resources */,
 				C3571B081843942500A40CEE /* SLFoodController.xib in Resources */,
 				C39EC96A1842E2D50042E881 /* InfoPlist.strings in Resources */,
@@ -776,9 +845,12 @@
 				C39EC9721842E2D50042E881 /* Default.png in Resources */,
 				C3571AFD1843940100A40CEE /* SLMainViewController.xib in Resources */,
 				C3571AF01843882300A40CEE /* icon_homepage_foodCategory.png in Resources */,
+				C3E914E21850BA6E002DB841 /* icon_homepage_map.png in Resources */,
 				C3185D8E184F1CB3005F4F24 /* Empty.xib in Resources */,
 				C3F6B32818444AA5008BE05F /* SLMovieController.xib in Resources */,
+				C3E914FD1850CF2E002DB841 /* icon_route_end@2x.png in Resources */,
 				C3508B0C18508EC9008A5EB4 /* BusSearchPoint.png in Resources */,
+				C3E914E31850BA6E002DB841 /* icon_homepage_map@2x.png in Resources */,
 				C3C152C9184E2493000F1806 /* SLBarController.xib in Resources */,
 				C3571AF71843882300A40CEE /* icon_rating_star_picked.png in Resources */,
 				C3571AEF1843882300A40CEE /* icon_homepage_entertainmentCategory.png in Resources */,
@@ -786,14 +858,18 @@
 				C3F6B33118444FB9008BE05F /* icon_dealsmap_back@2x.png in Resources */,
 				C3C152C0184E2364000F1806 /* 37x-Checkmark@2x.png in Resources */,
 				C3F6B32318444A75008BE05F /* SLMerchantCell.xib in Resources */,
+				C3E914FE1850CF2E002DB841 /* icon_route_start.png in Resources */,
 				C3C152BF184E2364000F1806 /* 37x-Checkmark.png in Resources */,
+				C3E915001850CF2E002DB841 /* lottery_close@2x.png in Resources */,
 				C3571AF11843882300A40CEE /* icon_homepage_hotelCategory.png in Resources */,
+				C3E914FF1850CF2E002DB841 /* icon_route_start@2x.png in Resources */,
 				C3C152D8184E24DB000F1806 /* SLPedicureController.xib in Resources */,
 				C3F6B33018444FB9008BE05F /* icon_dealsmap_back.png in Resources */,
 				C38BA3F9184DE1E4001D0F44 /* SLDetailViewNavigatorCell.xib in Resources */,
 				C3C152B6184E2309000F1806 /* MerchantsImg.png in Resources */,
 				C3C152BE184E2364000F1806 /* 37x-Checkerror@2x.png in Resources */,
 				C38BA3F7184DE1C2001D0F44 /* SLDetailViewMapCell.xib in Resources */,
+				C3E915011850CF2E002DB841 /* lottery_close_hl@2x.png in Resources */,
 				C3571AF21843882300A40CEE /* icon_homepage_KTVCategory.png in Resources */,
 				C3C152BD184E2364000F1806 /* 37x-Checkerror.png in Resources */,
 				C39EC9741842E2D50042E881 /* Default@2x.png in Resources */,
@@ -818,6 +894,7 @@
 				C3B70D1818434AC700958FCE /* SDWebImagePrefetcher.m in Sources */,
 				C39EC96C1842E2D50042E881 /* main.m in Sources */,
 				C3B70D1B18434AC700958FCE /* UIImage+MultiFormat.m in Sources */,
+				C3E914EB1850BF7A002DB841 /* SLPlace.m in Sources */,
 				C3B70D1C18434AC700958FCE /* UIImage+WebP.m in Sources */,
 				C3C152CD184E249B000F1806 /* SLHotelsController.m in Sources */,
 				C35D3A5418431EF200D09512 /* PopoverView.m in Sources */,
@@ -830,13 +907,16 @@
 				C3B70D1118434AC700958FCE /* NSData+GIF.m in Sources */,
 				C38BA3F2184DE0D8001D0F44 /* SLDetailViewMapCell.m in Sources */,
 				C35D3A5318431EF200D09512 /* MBProgressHUD.m in Sources */,
+				C3E914F21850C2FA002DB841 /* RegexKitLite.m in Sources */,
 				C3B70D1D18434AC700958FCE /* UIImageView+WebCache.m in Sources */,
 				C3C152C8184E2493000F1806 /* SLBarController.m in Sources */,
 				C3C152D2184E24A3000F1806 /* SLKTVController.m in Sources */,
 				C3185D91184F2BBA005F4F24 /* SLBusLineCell.m in Sources */,
+				C3E914EE1850BFDE002DB841 /* SLPlaceMark.m in Sources */,
 				C35D3A5718431F2300D09512 /* SLRootViewController.m in Sources */,
 				C3571AFC1843940100A40CEE /* SLMainViewController.m in Sources */,
 				C35D3A5D1843244D00D09512 /* SLConnectionManager.m in Sources */,
+				C3E914E71850BE4C002DB841 /* SLNavigatorViewController.m in Sources */,
 				C3B70D1718434AC700958FCE /* SDWebImageManager.m in Sources */,
 				C3185D87184EEF17005F4F24 /* SLBusDM.m in Sources */,
 				C3F6B312184447A7008BE05F /* RNFrostedSidebar.m in Sources */,

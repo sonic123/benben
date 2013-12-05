@@ -50,7 +50,9 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
     titleLabel.textColor=[UIColor whiteColor];
     titleLabel.textAlignment=NSTextAlignmentCenter;
     self.navigationItem.titleView=titleLabel;
-    
+    if (self.navigationController.isNavigationBarHidden ) {
+        [self.navigationController setNavigationBarHidden:NO];
+    }
   
     
 }
@@ -144,6 +146,15 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
     self.busListController.lat=self.dataModel.lat;
     self.busListController.lng=self.dataModel.lng;
     [self.navigationController pushViewController:self.busListController animated:YES];
+}
+-(void)startNavigating{
+    if (!self.navigatorController) {
+        self.navigatorController=[[SLNavigatorViewController alloc]initWithNibName:@"SLNavigatorViewController" bundle:nil];
+    }
+    self.navigatorController.dateModel=self.dataModel;
+    [self.navigationController pushViewController:self.navigatorController animated:YES];
+    [self.navigationController setNavigationBarHidden:YES];
+    
 }
 
 @end

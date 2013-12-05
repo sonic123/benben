@@ -51,7 +51,7 @@
     [self.delegate startBusSearch];
 }
 -(IBAction)actNavigator:(id)sender{
-    
+    [self.delegate startNavigating];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

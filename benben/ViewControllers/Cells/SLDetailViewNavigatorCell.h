@@ -23,5 +23,6 @@
 
 @optional
 -(void)startBusSearch;
+-(void)startNavigating;
 
 @end

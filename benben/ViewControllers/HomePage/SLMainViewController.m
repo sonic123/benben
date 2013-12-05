@@ -68,6 +68,13 @@ static NSString *HomePageCellIdentifier = @"HomePageCellIdentifier";
     titleLabel.textAlignment=NSTextAlignmentCenter;
     self.navigationItem.titleView=titleLabel;
     titleLabel=nil;
+//    UIBarButtonItem *leftButtom=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_homepage_map"] style:UIBarButtonItemStylePlain target:self action:@selector(actChooseCity)];
+//     self.navigationItem.leftBarButtonItem=leftButtom;
+//    leftButtom=nil;
+    
+}
+-(void)actChooseCity{
+    
 }
 
 - (void)didReceiveMemoryWarning

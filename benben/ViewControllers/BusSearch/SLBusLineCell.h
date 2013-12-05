@@ -11,5 +11,6 @@
 @interface SLBusLineCell : UITableViewCell
 @property (strong, nonatomic) UILabel *lineDesc;
 @property (strong, nonatomic) UIImageView *lineView;
+
 -(void)updateStationPoint:(CGRect )frame withTitle:(NSMutableArray *)titleArray;
 @end

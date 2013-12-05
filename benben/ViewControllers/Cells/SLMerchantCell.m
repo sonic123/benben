@@ -33,10 +33,10 @@
         self.merchantName.font=[UIFont fontWithName:@"Avenir-Light" size:15];
         [self.contentView addSubview:self.merchantName];
         
-        self.merchantCost=[[UILabel alloc]initWithFrame:CGRectMake(253, 28, 61, 21)];
+        self.merchantCost=[[UILabel alloc]initWithFrame:CGRectMake(240, 28, 100, 21)];
         self.merchantCost.backgroundColor=[UIColor clearColor];
         self.merchantCost.text=@"人均:";
-        self.merchantCost.font=[UIFont fontWithName:@"Avenir-Light" size:15];
+        self.merchantCost.font=[UIFont fontWithName:@"Avenir-Light" size:14];
         [self.contentView addSubview:self.merchantCost];
         
         self.merchantCate=[[UILabel alloc]initWithFrame:CGRectMake(96, 52, 218, 21)];

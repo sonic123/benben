@@ -28,6 +28,8 @@
         self.lineView.backgroundColor=[UIColor clearColor];
         [self.contentView addSubview:self.lineView];
         
+       
+        
             }
     return self;
 }
@@ -57,10 +59,8 @@
     for (int i=0; i<[titleArray count]; i++) {
         @autoreleasepool {
             statImg=[[UIImageView alloc]initWithFrame:CGRectMake(42, i*temY, 16, 16)];
-            statImg.backgroundColor=[UIColor lightGrayColor];
-            statImg.layer.cornerRadius=10.0f;
-            statImg.layer.masksToBounds=YES;
-            
+            statImg.image=[UIImage imageNamed:@"BusSearchPoint"];
+
             titleLabel=[[UILabel alloc]initWithFrame:CGRectZero];
             titleLabel.text=[titleArray objectAtIndex:i];
             CGSize labelSize=[titleLabel.text sizeWithFont:[UIFont systemFontOfSize:10] constrainedToSize:CGSizeMake(40, 2000.0f) lineBreakMode:NSLineBreakByWordWrapping];

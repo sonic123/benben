@@ -153,7 +153,7 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
     SLMerchantsDM *oneMerchantDM=[self.merchantsArray objectAtIndex:indexPath.row];
     [cell.merchantAvator setImageWithURL:[NSURL URLWithString:oneMerchantDM.img_url] placeholderImage:[UIImage imageNamed:@"MerchantsImg.png"]];
     cell.merchantName.text=oneMerchantDM.name;
-    cell.merchantCost.text=[NSString stringWithFormat:@"人均:%@",oneMerchantDM.cost];
+    cell.merchantCost.text=[NSString stringWithFormat:@"人均:%@元",oneMerchantDM.cost];
     cell.merchantCate.text=oneMerchantDM.cate;
     double score=[oneMerchantDM.rate doubleValue];
     BOOL hasHalf;

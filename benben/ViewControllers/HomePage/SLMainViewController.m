@@ -51,6 +51,7 @@ static NSString *HomePageCellIdentifier = @"HomePageCellIdentifier";
             self.locationManager.desiredAccuracy=kCLLocationAccuracyBest;
             self.locationManager.distanceFilter=1000.0f;
         }
+        [self.locationManager setPausesLocationUpdatesAutomatically:YES];
         //启动位置更新
         [self.locationManager startUpdatingLocation];
     }else{
@@ -135,6 +136,7 @@ static NSString *HomePageCellIdentifier = @"HomePageCellIdentifier";
     delegate.lat=newLocation.coordinate.latitude;
     delegate.lng=newLocation.coordinate.longitude;
     delegate=nil;
+    
 
     
 }

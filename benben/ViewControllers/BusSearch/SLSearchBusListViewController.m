@@ -203,7 +203,7 @@ self.busArray=[NSMutableArray arrayWithCapacity:0];
 
     SLBusDM *oneBusDM=[self.busArray objectAtIndex:indexPath.section];
     SLBusSegmentDM *oneBusSegmentDM=[oneBusDM.segmentArray objectAtIndex:indexPath.row];
-    NSString *str=[NSString stringWithFormat:@"线路长度:%@\n\n步行%@米至%@\n\n乘坐%@至%@\n\n",oneBusSegmentDM.line_dist,oneBusSegmentDM.foot_dist,oneBusSegmentDM.start_stat,oneBusSegmentDM.line_name,oneBusSegmentDM.end_stat];
+    NSString *str=[NSString stringWithFormat:@"线路长度:%@米\n\n步行%@米至%@\n\n乘坐%@至%@",oneBusSegmentDM.line_dist,oneBusSegmentDM.foot_dist,oneBusSegmentDM.start_stat,oneBusSegmentDM.line_name,oneBusSegmentDM.end_stat];
     cell.lineDesc.text=str;
     CGSize constraint=CGSizeMake(200, 20000.0f);
     CGSize size=[str sizeWithFont:[UIFont fontWithName:@"Avenir-Light" size:13] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
@@ -211,15 +211,11 @@ self.busArray=[NSMutableArray arrayWithCapacity:0];
     cell.lineDesc.numberOfLines=0;
     cell.lineDesc.lineBreakMode=NSLineBreakByCharWrapping;
     cell.lineDesc.font=[UIFont fontWithName:@"Avenir-Light" size:13];
-    cell.lineDesc.frame=CGRectMake(110, 5, size.width, size.height);
+    cell.lineDesc.frame=CGRectMake(110, 0, size.width, size.height);
     
     cell.frame=CGRectMake(0, 0, 320, size.height+10);
     
-    UIView *selectedView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, size.height+10)];
-    selectedView.backgroundColor=[UIColor clearColor];
-    cell.selectedBackgroundView=selectedView;
-    selectedView=nil;
-    NSMutableArray *statArray=[NSMutableArray arrayWithCapacity:0];
+       NSMutableArray *statArray=[NSMutableArray arrayWithCapacity:0];
     NSString *statTitles=[[NSString alloc]init];
     statTitles=oneBusSegmentDM.stats;
     
@@ -231,9 +227,14 @@ self.busArray=[NSMutableArray arrayWithCapacity:0];
     [statArray addObject:statTitles];
     [statArray addObject:oneBusSegmentDM.end_stat];
     
-    [cell updateStationPoint:cell.frame withTitle:statArray];
-    
+    CGRect lineRect=CGRectMake(0, 0, 320, size.height);
+    [cell updateStationPoint:lineRect withTitle:statArray];
 
+    UIView *selectedView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, size.height+10)];
+    selectedView.backgroundColor=[UIColor clearColor];
+    cell.selectedBackgroundView=selectedView;
+    selectedView=nil;
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
 }
 

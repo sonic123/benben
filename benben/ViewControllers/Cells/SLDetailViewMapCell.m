@@ -43,7 +43,6 @@
 }
 -(void)retrieveCoordinate{
     CLLocationCoordinate2D coordinate={0};
-    NSLog(@"self.dataModel.name:%@",self.dataModel.name);
     if (self.dataModel) {
         coordinate.latitude=[self.dataModel.lat doubleValue];
         coordinate.longitude=[self.dataModel.lng doubleValue];

@@ -9,6 +9,7 @@
 #import "SLDetailViewController.h"
 #import "SLDetailViewMapCell.h"
 #import "SLDetailViewNavigatorCell.h"
+#import "SLSearchBusListViewController.h"
 
 static NSString *detailViewMapCellID = @"SLDetailViewMapCell";
 static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
@@ -20,6 +21,7 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
 @implementation SLDetailViewController
 @synthesize tableView;
 @synthesize dataModel;
+@synthesize busListController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -85,7 +87,6 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
                 cell=[[SLDetailViewMapCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:detailViewMapCellID];
             }
             cell.dataModel=self.dataModel;
-            NSLog(@"cell.dataModel.name:%@",cell.dataModel.name);
             cell.backgroundColor=[UIColor clearColor];
             [cell retrieveCoordinate];
             return cell;
@@ -96,7 +97,9 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
             SLDetailViewNavigatorCell *cell=[self.tableView dequeueReusableCellWithIdentifier:detailViewNavigatorCellID];
             if (!cell) {
                 cell=[[SLDetailViewNavigatorCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:detailViewNavigatorCellID];
+                
             }
+            cell.delegate=self;
             cell.dataModel=self.dataModel;
             cell.backgroundColor=[UIColor clearColor];
 
@@ -111,5 +114,16 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
 }
 #pragma mark -
 #pragma mark UITabLeViewDelegate
+
+#pragma mark -
+#pragma mark SLNavigatorDelegate
+-(void)startBusSearch{
+    if (!self.busListController) {
+        self.busListController=[[SLSearchBusListViewController alloc]initWithNibName:@"SLSearchBusListViewController" bundle:nil];;
+    }
+    self.busListController.lat=self.dataModel.lat;
+    self.busListController.lng=self.dataModel.lng;
+    [self.navigationController pushViewController:self.busListController animated:YES];
+}
 
 @end

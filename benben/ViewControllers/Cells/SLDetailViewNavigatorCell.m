@@ -48,7 +48,7 @@
     return self;
 }
 -(IBAction)actBusSearch:(id)sender{
-    
+    [self.delegate startBusSearch];
 }
 -(IBAction)actNavigator:(id)sender{
     

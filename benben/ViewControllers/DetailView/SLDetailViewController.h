@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "SLRootViewController.h"
 #import "SLMerchantsDM.h"
+#import "SLDetailViewNavigatorCell.h"
+@class SLSearchBusListViewController;
 
-@interface SLDetailViewController : SLRootViewController<UITableViewDataSource,UITableViewDelegate>
+@interface SLDetailViewController : SLRootViewController<UITableViewDataSource,UITableViewDelegate,SLNavigatorDelegate>
 
 @property (strong, nonatomic) SLMerchantsDM *dataModel;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) SLSearchBusListViewController *busListController;
 
 @end

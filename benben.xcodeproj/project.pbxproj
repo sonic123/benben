@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3185D83184ED0C2005F4F24 /* SLSearchBusListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3185D81184ED0C2005F4F24 /* SLSearchBusListViewController.m */; };
+		C3185D84184ED0C2005F4F24 /* SLSearchBusListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3185D82184ED0C2005F4F24 /* SLSearchBusListViewController.xib */; };
+		C3185D87184EEF17005F4F24 /* SLBusDM.m in Sources */ = {isa = PBXBuildFile; fileRef = C3185D86184EEF17005F4F24 /* SLBusDM.m */; };
+		C3185D8A184F05FD005F4F24 /* SLBusSearchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3185D89184F05FD005F4F24 /* SLBusSearchHeaderView.m */; };
+		C3185D8E184F1CB3005F4F24 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3185D8D184F1CB3005F4F24 /* Empty.xib */; };
+		C3185D91184F2BBA005F4F24 /* SLBusLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3185D90184F2BBA005F4F24 /* SLBusLineCell.m */; };
 		C3290732184CCC6500BB87B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3290731184CCC6500BB87B4 /* CoreLocation.framework */; };
 		C3571AEF1843882300A40CEE /* icon_homepage_entertainmentCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = C3571AE51843882300A40CEE /* icon_homepage_entertainmentCategory.png */; };
 		C3571AF01843882300A40CEE /* icon_homepage_foodCategory.png in Resources */ = {isa = PBXBuildFile; fileRef = C3571AE61843882300A40CEE /* icon_homepage_foodCategory.png */; };
@@ -92,6 +98,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3185D80184ED0C2005F4F24 /* SLSearchBusListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLSearchBusListViewController.h; sourceTree = "<group>"; };
+		C3185D81184ED0C2005F4F24 /* SLSearchBusListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLSearchBusListViewController.m; sourceTree = "<group>"; };
+		C3185D82184ED0C2005F4F24 /* SLSearchBusListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLSearchBusListViewController.xib; sourceTree = "<group>"; };
+		C3185D85184EEF17005F4F24 /* SLBusDM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBusDM.h; sourceTree = "<group>"; };
+		C3185D86184EEF17005F4F24 /* SLBusDM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBusDM.m; sourceTree = "<group>"; };
+		C3185D88184F05FD005F4F24 /* SLBusSearchHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBusSearchHeaderView.h; sourceTree = "<group>"; };
+		C3185D89184F05FD005F4F24 /* SLBusSearchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBusSearchHeaderView.m; sourceTree = "<group>"; };
+		C3185D8D184F1CB3005F4F24 /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		C3185D8F184F2BBA005F4F24 /* SLBusLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBusLineCell.h; sourceTree = "<group>"; };
+		C3185D90184F2BBA005F4F24 /* SLBusLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBusLineCell.m; sourceTree = "<group>"; };
 		C3290731184CCC6500BB87B4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C3571AE51843882300A40CEE /* icon_homepage_entertainmentCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_entertainmentCategory.png; sourceTree = "<group>"; };
 		C3571AE61843882300A40CEE /* icon_homepage_foodCategory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_foodCategory.png; sourceTree = "<group>"; };
@@ -262,6 +278,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3185D7E184ECFBB005F4F24 /* BusSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C3185D80184ED0C2005F4F24 /* SLSearchBusListViewController.h */,
+				C3185D81184ED0C2005F4F24 /* SLSearchBusListViewController.m */,
+				C3185D82184ED0C2005F4F24 /* SLSearchBusListViewController.xib */,
+				C3185D88184F05FD005F4F24 /* SLBusSearchHeaderView.h */,
+				C3185D89184F05FD005F4F24 /* SLBusSearchHeaderView.m */,
+				C3185D8D184F1CB3005F4F24 /* Empty.xib */,
+				C3185D8F184F2BBA005F4F24 /* SLBusLineCell.h */,
+				C3185D90184F2BBA005F4F24 /* SLBusLineCell.m */,
+			);
+			path = BusSearch;
+			sourceTree = "<group>";
+		};
+		C3185D7F184ECFBB005F4F24 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		C3571AE41843882300A40CEE /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +363,8 @@
 				C35D3A5C1843244D00D09512 /* SLConnectionManager.m */,
 				C3B70CE518433AA000958FCE /* SLMerchantsDM.h */,
 				C3B70CE618433AA100958FCE /* SLMerchantsDM.m */,
+				C3185D85184EEF17005F4F24 /* SLBusDM.h */,
+				C3185D86184EEF17005F4F24 /* SLBusDM.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -363,6 +403,8 @@
 		C35D3A321842E3C500D09512 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3185D7E184ECFBB005F4F24 /* BusSearch */,
+				C3185D7F184ECFBB005F4F24 /* Navigator */,
 				C3C152C1184E243C000F1806 /* Bar */,
 				C3C152C2184E243C000F1806 /* Hotels */,
 				C3C152C3184E243C000F1806 /* KTV */,
@@ -711,6 +753,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3185D84184ED0C2005F4F24 /* SLSearchBusListViewController.xib in Resources */,
 				C3571AF41843882300A40CEE /* icon_homepage_movieCategory.png in Resources */,
 				C38BA3EF184DDFB4001D0F44 /* SLDetailViewController.xib in Resources */,
 				C3571AF51843882300A40CEE /* icon_rating_star_half.png in Resources */,
@@ -721,6 +764,7 @@
 				C39EC9721842E2D50042E881 /* Default.png in Resources */,
 				C3571AFD1843940100A40CEE /* SLMainViewController.xib in Resources */,
 				C3571AF01843882300A40CEE /* icon_homepage_foodCategory.png in Resources */,
+				C3185D8E184F1CB3005F4F24 /* Empty.xib in Resources */,
 				C3F6B32818444AA5008BE05F /* SLMovieController.xib in Resources */,
 				C3C152C9184E2493000F1806 /* SLBarController.xib in Resources */,
 				C3571AF71843882300A40CEE /* icon_rating_star_picked.png in Resources */,
@@ -758,12 +802,14 @@
 			files = (
 				C3C152D7184E24DB000F1806 /* SLPedicureController.m in Sources */,
 				C3B70D1518434AC700958FCE /* SDWebImageDownloader.m in Sources */,
+				C3185D83184ED0C2005F4F24 /* SLSearchBusListViewController.m in Sources */,
 				C3B70D1818434AC700958FCE /* SDWebImagePrefetcher.m in Sources */,
 				C39EC96C1842E2D50042E881 /* main.m in Sources */,
 				C3B70D1B18434AC700958FCE /* UIImage+MultiFormat.m in Sources */,
 				C3B70D1C18434AC700958FCE /* UIImage+WebP.m in Sources */,
 				C3C152CD184E249B000F1806 /* SLHotelsController.m in Sources */,
 				C35D3A5418431EF200D09512 /* PopoverView.m in Sources */,
+				C3185D8A184F05FD005F4F24 /* SLBusSearchHeaderView.m in Sources */,
 				C39EC9701842E2D50042E881 /* SLAppDelegate.m in Sources */,
 				C38BA3F5184DE15D001D0F44 /* SLDetailViewNavigatorCell.m in Sources */,
 				C38BA3EE184DDFB4001D0F44 /* SLDetailViewController.m in Sources */,
@@ -775,10 +821,12 @@
 				C3B70D1D18434AC700958FCE /* UIImageView+WebCache.m in Sources */,
 				C3C152C8184E2493000F1806 /* SLBarController.m in Sources */,
 				C3C152D2184E24A3000F1806 /* SLKTVController.m in Sources */,
+				C3185D91184F2BBA005F4F24 /* SLBusLineCell.m in Sources */,
 				C35D3A5718431F2300D09512 /* SLRootViewController.m in Sources */,
 				C3571AFC1843940100A40CEE /* SLMainViewController.m in Sources */,
 				C35D3A5D1843244D00D09512 /* SLConnectionManager.m in Sources */,
 				C3B70D1718434AC700958FCE /* SDWebImageManager.m in Sources */,
+				C3185D87184EEF17005F4F24 /* SLBusDM.m in Sources */,
 				C3F6B312184447A7008BE05F /* RNFrostedSidebar.m in Sources */,
 				C3B70D1418434AC700958FCE /* SDWebImageDecoder.m in Sources */,
 				C3F6B32218444A75008BE05F /* SLMerchantCell.m in Sources */,

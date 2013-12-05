@@ -9,10 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "SLMerchantsDM.h"
 
+@protocol SLNavigatorDelegate;
 @interface SLDetailViewNavigatorCell : UITableViewCell
 
+@property (assign, nonatomic) id<SLNavigatorDelegate> delegate;
 @property (strong, nonatomic) SLMerchantsDM *dataModel;
 @property (strong, nonatomic) IBOutlet UIButton *busBtn;
 @property (strong, nonatomic) IBOutlet UIButton *navigatorBtn;
+
+@end
+
+@protocol SLNavigatorDelegate <NSObject>
+
+@optional
+-(void)startBusSearch;
 
 @end

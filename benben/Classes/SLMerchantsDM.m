@@ -46,7 +46,7 @@
                 if (objTmp &&[objTmp isKindOfClass:[NSArray class]]) {
                     arrTmp=(NSArray *)objTmp;
                 }else{
-                    arrTmp=nil;
+                    objTmp=nil;
                 }
             }else{
                 dicTmp=nil;

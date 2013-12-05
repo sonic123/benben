@@ -77,7 +77,7 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
     if (delegate.lat||delegate.lng) {
        [_aiBang searchBizWithCity:@"上海" Query:@"影院" Address:@"" Category:@"" Lng:[NSString stringWithFormat:@"%f",delegate.lng] Lat:[NSString stringWithFormat:@"%f",delegate.lat] Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
     }else{
-        [_aiBang searchBizWithCity:@"北京" Query:@"影院" Address:@"" Category:@"" Lng:@"116.420038" Lat:@"39.908568" Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
+        [_aiBang searchBizWithCity:@"上海" Query:@"影院" Address:@"" Category:@"" Lng:@"121.598105" Lat:@"31.211067" Radius:@"5000" Rankcode:@"0" From:[NSString stringWithFormat:@"%d",_fromNumber] To:[NSString stringWithFormat:@"%d",_toNumber]];
     }
     delegate=nil;
 }
@@ -92,7 +92,6 @@ static NSString *MerchantCellIdentifier = @"MerchantCellIdentifier";
 -(void) requestDidFinishWithData:(NSData*)data aibangApi:(id)aibangApi{
     
     if ([SLMerchantsDM parseIntoMerchantstList:self.cinemaArray fromString:data]) {
-        NSLog(@"%@",self.cinemaArray);
         [super changeHudToCustomViewMode:@"success" withImage:@"37x-CheckMark.png" hideAfterTimeIntervals:1];
         [self.cinemaTable reloadData];
     }else{

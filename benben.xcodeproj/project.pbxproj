@@ -35,6 +35,8 @@
 		C35D3A5418431EF200D09512 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C35D3A5018431EF200D09512 /* PopoverView.m */; };
 		C35D3A5718431F2300D09512 /* SLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35D3A5618431F2300D09512 /* SLRootViewController.m */; };
 		C35D3A5D1843244D00D09512 /* SLConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C35D3A5C1843244D00D09512 /* SLConnectionManager.m */; };
+		C385ED571851696E00868FFF /* SLDetailViewDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C385ED561851696E00868FFF /* SLDetailViewDescriptionCell.m */; };
+		C385ED591851698600868FFF /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = C385ED581851698600868FFF /* Empty.xib */; };
 		C38BA3E8184DDA80001D0F44 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C38BA3E6184DDA61001D0F44 /* libzbar.a */; };
 		C38BA3E9184DDA92001D0F44 /* libAibangApi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B70CE31843389700958FCE /* libAibangApi.a */; };
 		C38BA3EE184DDFB4001D0F44 /* SLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38BA3EC184DDFB4001D0F44 /* SLDetailViewController.m */; };
@@ -155,6 +157,9 @@
 		C35D3A591843235300D09512 /* libAibangApi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAibangApi.a; sourceTree = "<group>"; };
 		C35D3A5B1843244D00D09512 /* SLConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConnectionManager.h; sourceTree = "<group>"; };
 		C35D3A5C1843244D00D09512 /* SLConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConnectionManager.m; sourceTree = "<group>"; };
+		C385ED551851696E00868FFF /* SLDetailViewDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDetailViewDescriptionCell.h; sourceTree = "<group>"; };
+		C385ED561851696E00868FFF /* SLDetailViewDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewDescriptionCell.m; sourceTree = "<group>"; };
+		C385ED581851698600868FFF /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		C38BA3D2184DDA61001D0F44 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		C38BA3D3184DDA61001D0F44 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		C38BA3D4184DDA61001D0F44 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -764,6 +769,9 @@
 				C38BA3F3184DE15D001D0F44 /* SLDetailViewNavigatorCell.h */,
 				C38BA3F4184DE15D001D0F44 /* SLDetailViewNavigatorCell.m */,
 				C38BA3F8184DE1E4001D0F44 /* SLDetailViewNavigatorCell.xib */,
+				C385ED551851696E00868FFF /* SLDetailViewDescriptionCell.h */,
+				C385ED561851696E00868FFF /* SLDetailViewDescriptionCell.m */,
+				C385ED581851698600868FFF /* Empty.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -840,6 +848,7 @@
 				C3E914E81850BE4C002DB841 /* SLNavigatorViewController.xib in Resources */,
 				C3C152D3184E24A3000F1806 /* SLKTVController.xib in Resources */,
 				C3571B081843942500A40CEE /* SLFoodController.xib in Resources */,
+				C385ED591851698600868FFF /* Empty.xib in Resources */,
 				C39EC96A1842E2D50042E881 /* InfoPlist.strings in Resources */,
 				C3C152CE184E249B000F1806 /* SLHotelsController.xib in Resources */,
 				C39EC9721842E2D50042E881 /* Default.png in Resources */,
@@ -917,6 +926,7 @@
 				C3571AFC1843940100A40CEE /* SLMainViewController.m in Sources */,
 				C35D3A5D1843244D00D09512 /* SLConnectionManager.m in Sources */,
 				C3E914E71850BE4C002DB841 /* SLNavigatorViewController.m in Sources */,
+				C385ED571851696E00868FFF /* SLDetailViewDescriptionCell.m in Sources */,
 				C3B70D1718434AC700958FCE /* SDWebImageManager.m in Sources */,
 				C3185D87184EEF17005F4F24 /* SLBusDM.m in Sources */,
 				C3F6B312184447A7008BE05F /* RNFrostedSidebar.m in Sources */,

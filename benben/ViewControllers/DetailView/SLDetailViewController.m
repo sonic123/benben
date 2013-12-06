@@ -9,10 +9,13 @@
 #import "SLDetailViewController.h"
 #import "SLDetailViewMapCell.h"
 #import "SLDetailViewNavigatorCell.h"
+#import "SLDetailViewDescriptionCell.h"
 #import "SLSearchBusListViewController.h"
+
 
 static NSString *detailViewMapCellID = @"SLDetailViewMapCell";
 static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
+static NSString *detailViewDescriptionCellID = @"LDetailViewDescriptionCell";
 
 @interface SLDetailViewController ()
 
@@ -38,6 +41,7 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
     // Do any additional setup after loading the view from its nib.
     [self.tableView registerClass:[SLDetailViewMapCell class] forCellReuseIdentifier:detailViewMapCellID];
     [self.tableView registerClass:[SLDetailViewNavigatorCell class] forCellReuseIdentifier:detailViewNavigatorCellID];
+    [self.tableView registerClass:[SLDetailViewDescriptionCell class] forCellReuseIdentifier:detailViewDescriptionCellID];
 
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -74,7 +78,7 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
 #pragma mark UITabLeViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (self.dataModel) {
-        return 2;
+        return 3;
     }
     return 0;
 }
@@ -87,8 +91,14 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
         case 1:
             return 44;
             break;
+        case 2:{
+            SLDetailViewDescriptionCell *cell=(SLDetailViewDescriptionCell *)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+            NSLog(@"hight:%f",cell.frame.size.height);
+            return cell.frame.size.height;
+        }
+            break;
         default:
-            return 44;
+            return 0;
             break;
     }
     
@@ -119,6 +129,21 @@ static NSString *detailViewNavigatorCellID = @"SLDetailViewNavigatorCell";
             cell.dataModel=self.dataModel;
             cell.backgroundColor=[UIColor clearColor];
 
+            return cell;
+        }
+            break;
+        case 2:
+        {
+            SLDetailViewDescriptionCell *cell=[self.tableView dequeueReusableCellWithIdentifier:detailViewDescriptionCellID];
+            if (!cell) {
+                cell=[[SLDetailViewDescriptionCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:detailViewDescriptionCellID];
+            }
+            cell.description.text=[NSString stringWithFormat:@"简介：\n\t%@\n\n地址：\n\t%@\n电话：\n\t%@",self.dataModel.desc,self.dataModel.addr,self.dataModel.tel];
+            CGSize descSize=[cell.description.text sizeWithFont:[UIFont fontWithName:@"Avenir-Light" size:14.0f] constrainedToSize:CGSizeMake(280, 20000.0f) lineBreakMode:NSLineBreakByWordWrapping];
+            cell.description.frame=CGRectMake(20, 10, descSize.width, descSize.height);
+            cell.frame=CGRectMake(0, 0, 320, descSize.height+20);
+            cell.backgroundColor=[UIColor clearColor];
+            cell.selectionStyle=UITableViewCellSelectionStyleNone;
             return cell;
         }
             break;

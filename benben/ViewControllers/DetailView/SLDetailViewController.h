@@ -11,6 +11,7 @@
 #import "SLMerchantsDM.h"
 #import "SLDetailViewNavigatorCell.h"
 #import "SLNavigatorViewController.h"
+
 @class SLSearchBusListViewController;
 
 @interface SLDetailViewController : SLRootViewController<UITableViewDataSource,UITableViewDelegate,SLNavigatorDelegate>
